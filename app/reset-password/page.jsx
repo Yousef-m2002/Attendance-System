@@ -1,8 +1,12 @@
-import React from 'react'
-import NewPassword from '../_components/Authentications/NewPassword'
 
-export default function () {
+import NewPassword from '../_components/Authentications/NewPassword'
+import { Suspense } from "react";
+export const dynamic = "force-dynamic"; // يمنع Static Generation
+
+export default function Page() {
   return (
-    <NewPassword/>
-  )
+    <Suspense fallback={<div>Loading...</div>}>
+       <NewPassword/>
+    </Suspense>
+  );
 }
