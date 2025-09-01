@@ -1,3 +1,4 @@
+"use client"
 import NewPassword from '../../_components/Authentications/NewPassword'
 import React from 'react'
 

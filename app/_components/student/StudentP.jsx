@@ -94,7 +94,7 @@ export default function StudentP() {
           />
           <InfoItem
             label="النوع"
-            value={applicationUser.sex === "Male" ? "ذكر" : "أنثى"}
+            value={applicationUser.sex == "Female" ? "أنثى" : "ذكر"}
           />
           <InfoItem
             label="البريد الإلكتروني"

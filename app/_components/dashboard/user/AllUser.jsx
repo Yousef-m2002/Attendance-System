@@ -8,7 +8,6 @@ export default function StudentsPage() {
   const [filterSex, setFilterSex] = useState("");
   const [filterRole, setFilterRole] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [studentsData, setStudentsData] = useState([]);
   const [showAddForm, setShowAddForm] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -127,7 +126,7 @@ export default function StudentsPage() {
     const newStudent = {
       ...formData,
       sex: formData.sex === "male" ? "Male" : "Female", // تأكد من إرسال القيمة المقبولة
-      roles: ["Doctor"], // جرب Doctor بدل user
+      roles: ["Doctor"],
     };
 
     try {
@@ -262,6 +261,7 @@ export default function StudentsPage() {
                 <tr className="text-right">
                   <th className="p-3 text-blue-800 font-semibold">Id </th>
                   <th className="p-3 text-blue-800 font-semibold">الاسم </th>
+                
 
                   <th className="p-3 text-blue-800 font-semibold">الإيميل</th>
                   <th className="p-3 text-blue-800 font-semibold">
@@ -285,6 +285,7 @@ export default function StudentsPage() {
                     <td className="p-3 text-gray-700">
                       {student.firstName} {student.lastName}
                     </td>
+                    
 
                     <td className="p-3 text-gray-700">{student.email}</td>
                     <td className="p-3 text-gray-700">{student.nationalId}</td>
