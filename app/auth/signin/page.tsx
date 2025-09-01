@@ -1,11 +1,12 @@
 
 import SignInPage from '../../_components/Authentications/SignInPage'
-import React from 'react'
+import { Suspense } from "react";
+export const dynamic = "force-dynamic"; // يمنع Static Generation
 
-export default function page() {
+export default function Page() {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <SignInPage/>
-    </div>
-  )
+    </Suspense>
+  );
 }

@@ -1,8 +1,13 @@
 import ResetPasswordPage from '../../_components/Authentications/ResetPassword'
-import React from 'react'
 
-export default function page() {
+
+import { Suspense } from "react";
+export const dynamic = "force-dynamic"; // يمنع Static Generation
+
+export default function Page() {
   return (
-    <ResetPasswordPage/>
-  )
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResetPasswordPage/>
+    </Suspense>
+  );
 }

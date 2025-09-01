@@ -2,7 +2,7 @@
 import { Suspense } from "react";
 import NewPassword from "../../_components/Authentications/NewPassword";
 
-export const dynamic = "force-dynamic"; // يمنع Static Generation
+export const dynamic = "force-dynamic"; 
 
 export default function Page() {
   return (
