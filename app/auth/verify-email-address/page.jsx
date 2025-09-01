@@ -1,7 +1,11 @@
 import VerifyEmail from "../../_components/Authentications//Ass"
+import { Suspense } from "react";
+export const dynamic = "force-dynamic"; // يمنع Static Generation
 
-export default function page() {
+export default function Page() {
   return (
-    <VerifyEmail/>
-  )
+    <Suspense fallback={<div>Loading...</div>}>
+       <VerifyEmail/>
+    </Suspense>
+  );
 }
