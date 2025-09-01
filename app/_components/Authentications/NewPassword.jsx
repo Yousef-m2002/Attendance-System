@@ -49,7 +49,7 @@ export default function NewPassword() {
       }
   
       try {
-          const response = await fetch(' https://baseattendence.runasp.net/api/Auth/ResetPassword', {
+          const response = await fetch('https://baseattendence.runasp.net/api/Auth/ResetPassword', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ 
@@ -86,10 +86,10 @@ export default function NewPassword() {
           }
   
           setSuccess('Password has been reset successfully!');
-          setTimeout(() => {
-              router.replace('/reset-password');
-              router.push('auth/signin');
-          }, 2000);
+        setTimeout(() => {
+  router.push('/auth/signin');
+}, 2000);
+
       } catch (err) {
           console.error("Error:", err);
           setError(err.message);
