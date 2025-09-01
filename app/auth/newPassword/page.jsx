@@ -1,9 +1,13 @@
-"use client"
-import NewPassword from '../../_components/Authentications/NewPassword'
-import React from 'react'
+// app/auth/newPassword/page.tsx
+import { Suspense } from "react";
+import NewPassword from "../../_components/Authentications/NewPassword";
 
-export default function page() {
+export const dynamic = "force-dynamic"; // يمنع Static Generation
+
+export default function Page() {
   return (
-    <NewPassword/>
-  )
+    <Suspense fallback={<div>Loading...</div>}>
+      <NewPassword />
+    </Suspense>
+  );
 }
