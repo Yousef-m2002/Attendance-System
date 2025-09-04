@@ -21,7 +21,7 @@ const Studntd = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://baseattendence.runasp.net/api/Students/GetAll")
+    fetch("https://mtisattendence.runasp.net/api/Students/GetAll")
       .then((response) => response.json())
       .then((data) => {
         setStudentsData(data);
@@ -51,7 +51,7 @@ const Studntd = () => {
   }, [searchTerm, studentsData]);
 
   const handleDelete = (doctorId) => {
-    fetch(`https://baseattendence.runasp.net/api/Students/Delete/${doctorId}`, {
+    fetch(`https://mtisattendence.runasp.net/api/Students/Delete/${doctorId}`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -60,7 +60,7 @@ const Studntd = () => {
         return response.text();
       })
       .then(() => {
-        fetch("https://baseattendence.runasp.net/api/Students/GetAll")
+        fetch("https://mtisattendence.runasp.net/api/Students/GetAll")
           .then((response) => response.json())
           .then((data) => {
             setStudentsData(data);
@@ -88,7 +88,7 @@ const Studntd = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        "https://baseattendence.runasp.net/api/Nfc_Cards/Create ",
+        "https://mtisattendence.runasp.net/api/Nfc_Cards/Create",
         {
           method: "POST",
           body: formData,
@@ -123,7 +123,7 @@ const Studntd = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `https://baseattendence.runasp.net/api/Nfc_Cards/Update/${editData.nfcId}`,
+        `https://mtisattendence.runasp.net/api/Nfc_Cards/Update/${editData.nfcId}`,
         {
           method: "PUT", // استخدام PUT لتحديث البيانات
           body: formData,
@@ -142,7 +142,7 @@ const Studntd = () => {
       setLoading(false);
     }
 
-    fetch("https://baseattendence.runasp.net/api/Students/GetAll")
+    fetch("https://mtisattendence.runasp.net/api/Students/GetAll")
       .then((response) => response.json())
       .then((data) => {
         setStudentsData(data);

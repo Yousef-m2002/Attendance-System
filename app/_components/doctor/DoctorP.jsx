@@ -19,7 +19,7 @@ const DoctorP = () => {
     const fetchDoctorData = async () => {
       try {
         const response = await fetch(
-          "https://baseattendence.runasp.net/api/Doctors/Get",
+          "https://mtisattendence.runasp.net/api/Doctors/Get",
           {
             method: "GET",
             headers: {

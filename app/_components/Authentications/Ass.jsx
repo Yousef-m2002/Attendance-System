@@ -20,7 +20,7 @@ const VerifyEmail = () => {
       const verifyEmail = async () => {
         try {
           console.log("Verifying email...");
-          const response = await fetch("https://baseattendence.runasp.net/api/Auth/ConfirmEmail", {
+          const response = await fetch("https://mtisattendence.runasp.net/api/Auth/ConfirmEmail", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ code, userId }),

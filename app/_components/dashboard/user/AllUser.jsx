@@ -35,7 +35,7 @@ export default function StudentsPage() {
     if (!token) return;
     try {
       const res = await fetch(
-        "https://baseattendence.runasp.net/api/Users/GetAll",
+        "https://mtisattendence.runasp.net/api/Users/GetAll",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ export default function StudentsPage() {
     if (!token) return;
     try {
       const res = await fetch(
-        `https://baseattendence.runasp.net/api/Doctors/Create`,
+        `https://mtisattendence.runasp.net/api/Doctors/Create`,
         {
           method: "POST",
           headers: {
@@ -100,7 +100,7 @@ export default function StudentsPage() {
 
       // إرسال طلب الحذف
       const res = await fetch(
-        `https://baseattendence.runasp.net/api/Users/Delete/${email}`,
+        `https://mtisattendence.runasp.net/api/Users/Delete/${email}`,
         {
           method: "DELETE",
           headers: {
@@ -131,7 +131,7 @@ export default function StudentsPage() {
 
     try {
       const res = await fetch(
-        "https://baseattendence.runasp.net/api/Users/Add",
+        " https://mtisattendence.runasp.net/api/Users/Add",
         {
           method: "POST",
           headers: {
@@ -184,7 +184,7 @@ export default function StudentsPage() {
   const handleSubmit = async () => {
     try {
       const response = await fetch(
-        " https://baseattendence.runasp.net/api/Students/Add",
+        "https://mtisattendence.runasp.net/api/Students/Add",
         {
           method: "POST",
           headers: {

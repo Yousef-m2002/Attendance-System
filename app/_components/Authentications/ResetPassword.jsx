@@ -18,7 +18,7 @@ export default function ResetPasswordPage() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://baseattendence.runasp.net/api/Auth/ForgetPassword", {
+      const response = await fetch("https://mtisattendence.runasp.net/api/Auth/ForgetPassword", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

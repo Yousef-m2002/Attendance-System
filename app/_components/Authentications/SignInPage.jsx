@@ -30,7 +30,7 @@ export default function SignInPage() {
     setError("");
 
     try {
-      const response = await fetch("https://baseattendence.runasp.net/api/Auth/Login", {
+      const response = await fetch("https://mtisattendence.runasp.net/api/Auth/Login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

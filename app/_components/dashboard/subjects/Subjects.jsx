@@ -25,7 +25,7 @@ const Subjects = () => {
     const fetchSubjects = async () => {
       try {
         const response = await fetch(
-          "https://baseattendence.runasp.net/api/Subjects/GetAll",
+          "https://mtisattendence.runasp.net/api/Subjects/GetAll",
           {
             method: "GET",
             headers: {
@@ -72,7 +72,7 @@ const Subjects = () => {
 
     try {
       const response = await fetch(
-        `https://baseattendence.runasp.net/api/Subjects/Delete/${id}`,
+        ` https://mtisattendence.runasp.net/api/Subjects/Delete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -112,7 +112,7 @@ const Subjects = () => {
 
     try {
       const response = await fetch(
-        `https://baseattendence.runasp.net/api/Subjects/Update/${currentSubject.id}`,
+        `https://mtisattendence.runasp.net/api/Subjects/Update/${currentSubject.id}`,
         {
           method: "PUT",
           headers: {
@@ -170,7 +170,7 @@ const Subjects = () => {
 
     try {
       const response = await fetch(
-        "https://baseattendence.runasp.net/api/Subjects/Create",
+        "https://mtisattendence.runasp.net/api/Subjects/Create",
         {
           method: "POST",
           headers: {

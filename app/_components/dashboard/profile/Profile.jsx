@@ -13,7 +13,7 @@ export default function Profile() {
       try {
         const token = JSON.parse(localStorage.getItem('User'))?.tokens;
 
-        const res = await fetch('https://baseattendence.runasp.net/api/Account/Profile', {
+        const res = await fetch('https://mtisattendence.runasp.net/api/Account/Profile', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`

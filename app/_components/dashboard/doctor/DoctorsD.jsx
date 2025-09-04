@@ -8,7 +8,7 @@ const DoctorsD = () => {
 
   // دالة لجلب البيانات من الـ API
   const fetchData = () => {
-    fetch("https://baseattendence.runasp.net/api/Doctors/GetAll")
+    fetch("https://mtisattendence.runasp.net/api/Doctors/GetAll")
       .then((response) => response.json())
       .then((data) => {
         setStudentsData(data);
@@ -46,7 +46,7 @@ const DoctorsD = () => {
   const handleDelete = async (doctorUserId) => {
     if (window.confirm("هل أنت متأكد أنك تريد حذف هذا الدكتور؟")) {
       try {
-        const response = await fetch(`https://baseattendence.runasp.net/api/Doctors/Delete/${doctorUserId}`, {
+        const response = await fetch(`https://mtisattendence.runasp.net/api/Doctors/Delete/${doctorUserId}`, {
           method: "DELETE",
         });
 

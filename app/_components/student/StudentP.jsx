@@ -13,7 +13,7 @@ export default function StudentP() {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("User"))?.tokens;
 
-    fetch("https://baseattendence.runasp.net/api/Students/Get", {
+    fetch("https://mtisattendence.runasp.net/api/Students/Get", {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",

@@ -14,7 +14,7 @@ export default function Page() {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://baseattendence.runasp.net/api/Subjects/Get/${id}`)
+      fetch(`https://mtisattendence.runasp.net/api/Subjects/Get/${id}`)
         .then(response => response.json())
         .then(data => {
           setAttendanceData(data);

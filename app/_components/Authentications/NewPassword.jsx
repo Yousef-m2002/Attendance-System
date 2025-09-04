@@ -49,7 +49,7 @@ export default function NewPassword() {
       }
   
       try {
-          const response = await fetch('https://baseattendence.runasp.net/api/Auth/ResetPassword', {
+          const response = await fetch('https://mtisattendence.runasp.net/api/Auth/ResetPassword', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ 

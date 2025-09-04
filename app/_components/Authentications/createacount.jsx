@@ -111,7 +111,7 @@ export default function CreateAccount() {
       console.log(formData.nationality);
 
       const res = await fetch(
-        "https://baseattendence.runasp.net/api/Auth/Register",
+        "https://mtisattendence.runasp.net/api/Auth/Login",
         {
           method: "POST",
           body: formDataToSend, // No need for Content-Type when using FormData
